@@ -20,7 +20,5 @@ menu = [
 # Second sloution
 
 for meal in menu:
-    for item in meal:
-        if item != "spam":
-            print(item, end=", ")
-    print()
+    items = ", ".join((item for item in meal if item != "spam"))
+    print(items)
