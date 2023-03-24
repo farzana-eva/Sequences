@@ -8,19 +8,17 @@ menu = [
     ["spam", "egg", "spam", "spam", "milk", "spam"],
     ["spam", "bread", "spam", "milk", "spam", "tomato", "spam"],
 ]
-# 1st sloution
+# 1st solution
 
-#for meal in menu:
+# for meal in menu:
 #   for index in range(len(meal) - 1, -1, -1):
 #        if meal[index] == "spam":
 #            del meal[index]
 #    print(meal)
 
 
-# Second sloution
+# Second solution
 
 for meal in menu:
-    for item in meal:
-        if item != "spam":
-            print(item, end=", ")
-    print()
+    items = ", ".join((item for item in meal if item != "spam"))
+    print(items)
